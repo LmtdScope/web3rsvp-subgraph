@@ -1,6 +1,7 @@
 type Event @entity {
   id: ID!
   eventID: Bytes!
+  cid: String!
   name: String
   description: String
   link: String

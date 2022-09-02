@@ -51,6 +51,15 @@ export class Event extends Entity {
     this.set("eventID", Value.fromBytes(value));
   }
 
+  get cid(): string {
+    let value = this.get("cid");
+    return value!.toString();
+  }
+
+  set cid(value: string) {
+    this.set("cid", Value.fromString(value));
+  }
+
   get name(): string | null {
     let value = this.get("name");
     if (!value || value.kind == ValueKind.NULL) {

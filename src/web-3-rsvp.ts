@@ -51,6 +51,7 @@ export function handleNewEventCreated(event: NewEventCreated): void {
     newEvent.paidOut = false;
     newEvent.totalRSVPs = integer.ZERO;
     newEvent.totalConfirmedAttendees = integer.ZERO;
+    newEvent.cid = event.params.eventDataCID;
 
     let metadata = ipfs.cat(event.params.eventDataCID + "/data.json");
 
